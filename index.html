@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tamagotchi</title>
+    <!-- Importación de Tailwind CSS -->
+    Apprendre le dev à l'ère des IA (YouTube)
+
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style type="text/tailwindcss">
+
+    @layer base {
+      :root {
+        line-height: 1.6;
+      }
+ 
+      }
+  </style>
+
+
+</head>
+<body class="bg-[url('cat.jpg')] bg-cover bg-center bg-no-repeat w-full h-96
+ flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor Principal -->
+    <div class="bg-[url('usertech.jpg')] bg-cover bg-center bg-no-repeat w-full h-96 rounded-2xl p-6 max-w-3xl w-full shadow-2xl  mx-4 ">
+        
+        <!-- Bloque Superior: Imagen y Estadísticas -->
+        <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+            
+            <!-- Contenedor de Imagen -->
+            <div class="bg-white p-4 rounded-xl shadow-md border border-slate-200 text-center w-64">
+                <img id="imagen-patoso" src="duchar.jpg" alt="Patoso" class="w-full h-48 object-cover rounded-lg mb-2">
+                <h2 class="text-xl font-bold text-slate-800">Patoso</h2>
+            </div>
+
+            <!-- Panel de Estado -->
+            <div class="flex-1 space-y-3 text-slate-700 w-full">
+                <div class="flex justify-between items-center bg-white p-2 rounded-lg shadow-sm">
+                <span class="font-semibold">felicidad:</span>
+                <span id="jauge-felicidad" class="text-amber-500 text-lg"></span>
+            </div>
+            <div class="flex justify-between items-center bg-white p-2 rounded-lg shadow-sm">
+                <span class="font-semibold">salud:</span>
+                <span id="jauge-salud" class="text-amber-500 text-lg"></span>
+            </div>
+            <div class="flex justify-between items-center bg-white p-2 rounded-lg shadow-sm">
+                <span class="font-semibold">limpieza:</span>
+                <span id="jauge-limpieza" class="text-amber-500 text-lg"></span>
+            </div>
+            <div class="flex justify-between items-center bg-white p-2 rounded-lg shadow-sm">
+                <span class="font-semibold">energia:</span>
+                <span id="jauge-energia" class="text-amber-500 text-lg"></span>
+            </div>
+
+                <p class="text-xl text-white ">personalidad:</p>
+            </div>
+        </div>
+
+        <!-- Descripción -->
+        <div class="mt-6 bg-white p-4 rounded-xl border border-slate-50 italic text-slate-600 text-sm shadow-inner">
+            <p><span class="font-bold not-italic text-slate-800">Patoso</span> es un patito que le gusta comer mucho, jugar, no le gusta que lo manden a dormir.</p>
+        </div>
+
+        <!-- Barra de Botones de Acción -->
+        <div class="mt-6 flex flex-wrap gap-3 justify-center border-t border-slate-300 pt-6">
+            <button onclick="agir('duchar')" class="bg-amber-200 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">duchar</button>
+            <button onclick="agir('alimentar')" class="bg-sky-200 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">alimentar</button>
+            <button onclick="agir('jugar')" class="bg-violet-400 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">jugar</button>
+            <button onclick="agir('dormir')" class="bg-green-300 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">dormir</button>
+            <button onclick="agir('reprender')" class="bg-blue-400 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">reprender</button>
+            <button onclick="agir('acariciar')" class="bg-sky-200 hover:bg-sky-300 text-slate-800 font-medium py-2 px-4 rounded border border-sky-400 cursor-pointer transition">acariciar</button>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
